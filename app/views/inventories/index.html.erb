@@ -1,0 +1,9 @@
+<div class='container-md'>
+
+  <h2>Created Inventories</h2>
+  <%# TODO: Only show inventories created by current user %>
+  <% @inventories.each do |inventory| %>
+    <%= render partial: 'inventories/partials/inventory_card', locals: { inventory: inventory } %>
+  <% end %>
+
+</div>
