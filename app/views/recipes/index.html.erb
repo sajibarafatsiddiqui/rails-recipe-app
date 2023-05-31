@@ -1,0 +1,20 @@
+
+<% @recipes.each do |recipe| %>
+  <div class="row m-4">
+    <div class="col-6 col-sm-6 m-auto border border-dark ">
+    <%= link_to recipe_path(recipe), class:"text-decoration-none text-dark", :action => 'go'  do%>
+      <div class="row justify-content-between flex-1">
+        <div class="col-6 d-flex flex-column align-items-center justify-content-center">
+        <%= link_to recipe_path(recipe), class:"text-decoration-none text-dark" do%>
+          <h2><%= recipe.name %></h2>
+             <% end %>
+         <%= link_to 'Remove', @post, method: :delete , class: "col-2 m-2 "%>
+        </div>
+        <div class="col-6 d-flex align-items-center justify-content-center">
+          <div class="d-flex align-items-center"><%= recipe.description %></div>
+        </div>
+      </div>
+      <% end %>
+    </div>
+  </div>
+<% end %>
