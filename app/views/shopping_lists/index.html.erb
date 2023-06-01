@@ -2,9 +2,9 @@
     <h1> <%= @list %> </h1>
     <div id="list_summary">
         <p>Amount of Food to buy: 2</p>
-        <p>Recipe: <%= link_to 'Recipe 2', url: '/recipes/2' %> </p>
+        <p>Recipe: <%= link_to 'Recipe 2', url: recipe_path(2) %> </p>
         <p>Total value of food needed: $23</p>
-        <p>Inventory: <%= link_to 'Inventory 1', url: '/inventories/1' %></p>
+        <p>Inventory: <%= link_to 'Inventory 1', url: inventory_path(3) %></p>
     </div>
     <div id="shopping_table">
         <div class=" table_content shopping_table_head">

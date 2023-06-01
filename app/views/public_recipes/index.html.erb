@@ -3,7 +3,7 @@
     <% 5.times do %>
         <div class="public_recipe">
             <div class="recipe_name">
-                <h5>Simple Dish</h5>
+                <%= link_to  "Sanjay", url: recipe_path(3) %>
                 <p>by: David</p>
             </div>
             <div class="recipe_info">
@@ -16,7 +16,7 @@
    <% @recipes.each do |recipe| %>
         <div class="public_recipe">
             <div class="recipe_name">
-                <h5> <%= recipe.name%> </h5>
+                <%= link_to  "#{recipe.name}", url: recipe_path(recipe) %>
                 <p>by: <%= recipe.user.name%></p>
             </div>
             <div class="recipe_info">
