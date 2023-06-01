@@ -1,5 +1,5 @@
 class PublicRecipesController < ApplicationController
     def index
-        @recipes = Recipe.all
+        @recipes = Recipe.where(public: true)
     end
 end
