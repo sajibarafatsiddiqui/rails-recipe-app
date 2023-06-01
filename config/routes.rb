@@ -11,5 +11,4 @@ Rails.application.routes.draw do
   resources :inventories
   resources :public_recipes, only: [:index, :show]
   resources :shopping_lists, only: [:index, :show]
-  get "/shopping_lists?recipe_id=3&inventory_id=6", to: 'shopping_list#show'
 end
