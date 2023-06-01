@@ -3,3 +3,77 @@
 .nav-btns form {
   display: inline-block;
 }
+
+#public_recipes {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.public_recipe {
+  display: flex;
+  gap: 10px;
+  border: 1px solid black;
+  padding: 10px;
+  margin-bottom: 30px;
+  height: 100px;
+
+  .recipe_name {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .recipe_info {
+    align-self: start;
+
+    p {
+      margin: 0;
+      font-weight: 600;
+    }
+  }
+}
+
+#shopping_list {
+
+  h1 {
+    margin: 20px 0;
+    text-align: center;
+  }
+}
+
+#list_summary {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  margin: auto;
+  max-width: 50rem;
+  padding: 10px;
+
+  p {
+    font-size: 18px;
+    font-weight: 600;
+  }
+}
+
+#shopping_table {
+  margin: 40px auto;
+  max-width: 50rem;
+
+}
+
+.table_content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 30rem;
+  margin: auto;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.shopping_table_data:nth-child(even) {
+  background-color: #999;
+}
