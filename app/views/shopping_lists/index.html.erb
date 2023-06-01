@@ -1,0 +1,28 @@
+<section id="shopping_list">
+    <h1> <%= @list %> </h1>
+    <div id="list_summary">
+        <p>Amount of Food to buy: 2</p>
+        <p>Recipe: <%= link_to 'Recipe 2', url: '/recipes/2' %> </p>
+        <p>Total value of food needed: $23</p>
+        <p>Inventory: <%= link_to 'Inventory 1', url: '/inventories/1' %></p>
+    </div>
+    <div id="shopping_table">
+        <div class=" table_content shopping_table_head">
+            <h4>Food</h4>
+            <h4>Quantity</h4>
+            <h4>Price</h4>
+        </div>
+        <div class="table_content shopping_table_data">
+            <p>Apple</p>
+            <p>10 grams</p>
+            <p>$20</p>
+        </div>
+        <div class="table_content shopping_table_data">
+            <p>Pineapple</p>
+            <p>3 grams</p>
+            <p>$3</p>
+        </div>
+    </div>
+
+    
+</section>
