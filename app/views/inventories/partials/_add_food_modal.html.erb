@@ -2,11 +2,17 @@
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
       <div class="modal-header">
-        <h1 class="modal-title fs-5" id="addFoodModalLabel">Modal title</h1>
+        <h1 class="modal-title fs-5" id="addFoodModalLabel">Add Food</h1>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        <%= bootstrap_form_with do |f| %>
+            <%= f.text_field :name, placeholder: 'Name', hide_label: true %>
+            <%= f.text_field :unit, placeholder: 'Unit', hide_label: true %>
+            <%= f.text_field :price_per_unit, placeholder:'Price per unit', hide_label: true %>
+            <%= f.text_field :quantity, placeholder: 'Quantity', hide_label: true %>
+            <%= f.submit 'Add Food' %>
+        <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
