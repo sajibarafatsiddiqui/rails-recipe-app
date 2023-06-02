@@ -4,7 +4,8 @@ RSpec.describe 'Recipes Page', type: :system do
   describe 'Recipe /index' do
     before :each do
       @user = User.create!(name: 'sajib', email: 'sajib@gmail.com', password: '123455')
-      @recipe = Recipe.create!(name: 'recipe1', preparation_time: 1, cooking_time: 2, description: 'description for the recipe',
+      @recipe = Recipe.create!(name: 'recipe1', preparation_time: 1,
+                               cooking_time: 2, description: 'description for the recipe',
                                public: true, user_id: @user.id)
       @user.save!
       visit new_user_session_path
@@ -26,6 +27,5 @@ RSpec.describe 'Recipes Page', type: :system do
     it 'displays a button with text Remove' do
       expect(page).to have_content('Remove')
     end
-
   end
 end

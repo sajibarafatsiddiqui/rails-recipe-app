@@ -73,13 +73,13 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'autoprefixer-rails' # i'm not sure whether this is relevant
 gem 'bootstrap'
 gem 'bootstrap_form'
+gem 'bootstrap-sass'
+gem 'bootstrap-table-rails'
 gem 'cancancan'
 gem 'devise'
-gem 'bootstrap-sass'
-gem 'autoprefixer-rails' # i'm not sure whether this is relevant
-gem 'bootstrap-table-rails'
-gem 'switchery-rails'
 gem 'rspec'
 gem 'rspec-rails'
+gem 'switchery-rails'

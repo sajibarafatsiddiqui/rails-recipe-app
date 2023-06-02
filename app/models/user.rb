@@ -35,5 +35,4 @@ class User < ApplicationRecord
     end
     result
   end
-
 end

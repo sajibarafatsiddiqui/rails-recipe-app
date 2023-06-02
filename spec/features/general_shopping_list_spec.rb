@@ -1,9 +1,8 @@
 require 'rails_helper'
 
-RSpec.feature 'Shopping List', type: :feature do
+RSpec.feature 'Shopping', type: :feature do
   let(:user) do
-    User.create!(name: 'arafat', email: 'arafat@email.com',
-                 password: '123455')
+    User.create!(name: 'arafat', email: 'arafat@email.com', password: '123455')
   end
 
   before do
@@ -23,9 +22,11 @@ RSpec.feature 'Shopping List', type: :feature do
   scenario 'User can see the foods they need to buy' do
     food1 = Food.create!(user_id: user.id, name: 'Onion', measurement_unit: 'units', price: 0.1, quantity: 3)
     food2 = Food.create!(user_id: user.id, name: 'Milk', measurement_unit: 'ml', price: 0.5, quantity: 2)
-    recipe1 = Recipe.create!(name: 'Recipe 1', user_id: user.id, description: 'favorite', preparation_time: 60, cooking_time: 45,
+    recipe1 = Recipe.create!(name: 'Recipe 1', user_id: user.id,
+                             description: 'favorite', preparation_time: 60, cooking_time: 45,
                              public: false)
-    recipe2 = Recipe.create!(name: 'Recipe 2', user_id: user.id, description: 'favorite', preparation_time: 60, cooking_time: 45,
+    recipe2 = Recipe.create!(name: 'Recipe 2', user_id: user.id,
+                             description: 'favorite', preparation_time: 60, cooking_time: 45,
                              public: false)
     FoodRecipe.create!(recipe: recipe1, food: food1, quantity: 10)
     FoodRecipe.create!(recipe: recipe2, food: food2, quantity: 15)
