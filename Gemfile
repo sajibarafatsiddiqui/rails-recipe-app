@@ -81,3 +81,5 @@ gem 'bootstrap-sass'
 gem 'autoprefixer-rails' # i'm not sure whether this is relevant
 gem 'bootstrap-table-rails'
 gem 'switchery-rails'
+gem 'rspec'
+gem 'rspec-rails'

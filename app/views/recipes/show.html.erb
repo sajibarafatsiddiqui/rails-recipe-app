@@ -9,11 +9,12 @@
      <%if current_user.id == @recipe.user_id%>
     <%# <%= link_to 'Generate shopping list', general_shopping_list_path(recipe_id: @recipe.id), class: "btn cbtn"%> 
    <%= button_to 'Add Ingredient', new_recipe_foods_recipe_path(recipe_id: @recipe.id), method: :get, class: "btn cbtn" %> 
-    <%end%>
+    <%end%>                 
 <div class="form-check form-switch col-6 d-flex justify-content-end gap-5">
    <span class="form-check-label form-check-secondary " for="flexSwitchCheckDefault">Public</span>
+
     <input name="recipes[public]" type="hidden" value="true" />
-   <input type="checkbox" id="recipes_public" name="recipes[public]" value="false" class="form-check-input" checked />
+   <input type="checkbox" id="recipes_public" name="recipes[public]" value="false" class="form-check-input"  />
    </div>
   </div>
 

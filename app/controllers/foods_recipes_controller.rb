@@ -1,9 +1,12 @@
 class FoodsRecipesController < ApplicationController
     def new
         @first_user = current_user
-        @foods = current_user.foods
+        @user_foods = current_user.foods
         @food_recipe = FoodRecipe.new
-        @food_recipe.recipe_id = params[:recipe_id]
+        @recipe = Recipe.find(params[:recipe_id])
+        @foods_recipes = @recipe.foods_recipes.includes(:food)
+       @foods= @user_foods.where.not(id: @foods_recipes.select(:food_id))
+
     end
     def create
         @food_recipe = FoodRecipe.new(food_recipe_params)
