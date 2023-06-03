@@ -20,9 +20,9 @@ class FoodsRecipesController < ApplicationController
   end
 
   def destroy
-    @food_recipe = FoodRecipe.find(params[:id])
+    @food_recipe = FoodRecipe.find_by(recipe_id: params[:recipe_id], food_id: params[:id])
     if @food_recipe.destroy
-      redirect_to recipe_path(@recipe_food.recipe_id), notice: 'Recipe Food was deleted successfully'
+      redirect_to recipe_path(@food_recipe.recipe_id), notice: 'Recipe Food was deleted successfully'
     else
       flash.now[:alert] = @recipe_food.errors.full_messages.first if @recipe_food.errors.any?
       render :new, status: 400
