@@ -20,7 +20,7 @@
 - [🙏 Acknowledgements](#acknowledgements)
 - [📝 License](#license)
 
-# 📖 BlogMaster <a name="about-project"></a>
+# 📖 Rails Recipe App <a name="about-project"></a>
 
 **FoodRecipiesr** is a Rails interactive application where Users can create Posts and also can give and get like and comment.  
 
@@ -49,7 +49,7 @@
 - **Created four entities Foods,Recipes, General Shopping List, Public Recipes**
 - **Created controllers, routes, views according to the naming convention**
 - **Created Unit tests using RSpec on Controller, Views and Routes**
-- **Added the feaured of making commentd and giving like to blog post**
+- **Added the feaured of adding food and recipe**
 - **Added Integration testing using Capybara**
 - **Added Devise for Authentication.**
 
@@ -75,7 +75,7 @@ In order to run this project you need:
 ### Setup
 
 Clone this repository to your desired folder:
-  cd BlogMaster
+  cd d:
     <br>
   git clone git@github.com:sajibarafatsiddiqui/rails-recipe-app.git
 
@@ -95,10 +95,10 @@ To run the project, execute the following command:
 
 To run tests, run the following command:
 
-rspec spec
+rspec
 
 Integration Test:
- rspec ./test/system/
+ rspec ./spec/feature
 ### Deployment
 
 The deployment is under processing.
