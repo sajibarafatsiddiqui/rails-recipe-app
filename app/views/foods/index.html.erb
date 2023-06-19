@@ -1,0 +1,25 @@
+
+
+<div class="container d-flex justify-content-end mb-5" >
+  <%= link_to "Add Food", new_food_path(current_user), class: "btn btn-primary" %>
+</div>
+<table class="table table-striped table-bordered container">
+  <thead> 
+    <tr>
+      <th scope="row">Food</th>
+      <th>Measurement Unit</th>
+      <td>Unit Price</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+  <% @foods.each do |food| %>
+    <tr id="food_<%= food.id %>">
+      <th scope="row"><%= food.name %></th>
+      <td><%= food.measurement_unit %></td>
+      <td><%= food.price %></td>
+      <td> <%= button_to 'Remove', food_path(food.id), method: :delete , class: "btn btn-warning"%></td>
+    </tr>
+   <% end %>
+  </tbody>
+</table>

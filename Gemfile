@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.2'
+ruby '3.2.2'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.4', '>= 7.0.4.3'
@@ -54,7 +54,6 @@ group :development, :test do
   gem 'rubocop', '>= 1.0', '< 2.0'
 end
 
-
 group :development do
   # Use console on exceptions pages [https://github.com/rails/web-console]
   gem 'web-console'
@@ -73,7 +72,13 @@ group :test do
   gem 'webdrivers'
 end
 
+gem 'autoprefixer-rails' # i'm not sure whether this is relevant
 gem 'bootstrap'
 gem 'bootstrap_form'
+gem 'bootstrap-sass'
+gem 'bootstrap-table-rails'
 gem 'cancancan'
 gem 'devise'
+gem 'rspec'
+gem 'rspec-rails'
+gem 'switchery-rails'
